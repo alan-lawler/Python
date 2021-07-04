@@ -4,7 +4,7 @@ import re
 import datetime
 import lookup
 
-# regular expression to extract internal to external traffic from Cisco ASA logs
+# regular expression to extract internal to external traffic from Sophos XG Firewall logs
 reg = r"^.+date=(?P<date>\d{4}-\d{2}-\d{2})\stime=(?P<time>\d{2}:\d{2}:\d{2}).+log_subtype=\"(?P<action>\w+)\"\s" \
       r".+application=\"(?P<application>.+|)\"\sapplication_risk=.+src_ip=(?P<src>10.10.\d{2}\.\d{1,3})." \
       r"src_country_code=R1\sdst_ip=(?P<dest>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\sdst_country_code=(?P<country>\w+)" \
